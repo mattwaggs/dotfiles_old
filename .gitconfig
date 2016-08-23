@@ -1,0 +1,20 @@
+[user]
+    email = matt@mattwaggs.com
+    name = Matt Waggoner
+[credential]
+    helper = cache --timeout=7200
+[core]
+    editor = vim
+[alias]
+    stauts = status
+    s = status
+    pom = push origin master
+    
+    # shamelessly stolen from cbadke
+    lg = log --graph --date-order -C -M --pretty=format:\"<%Cred%h%Creset>\t%ad [%C(yellow)%an%Creset] %Cgreen%d%Creset %s\" --all --date=short
+    new = log origin/master.. --reverse -C -M --pretty=format:\"<%Cred%h%Creset> %ad [%C(yellow)%an%Creset] %Cgreen%d%Creset %s\" --all --date=short
+[log]
+    date = relative
+[color]
+    ui = auto
+
