@@ -1,20 +1,19 @@
 [user]
+    name = Matt
     email = matt@mattwaggs.com
-    name = Matt Waggoner
-[credential]
-    helper = cache --timeout=7200
 [core]
     editor = vim
 [alias]
-    stauts = status
     s = status
+    stauts = status # cause typos ¯\_(ツ)_/¯
+    c = commit
+    co = checkout
+    cm = commit -m
+    dw = diff -w
     pom = push origin master
-    
-    # shamelessly stolen from cbadke
-    lg = log --graph --date-order -C -M --pretty=format:\"<%Cred%h%Creset>\t%ad [%C(yellow)%an%Creset] %Cgreen%d%Creset %s\" --all --date=short
+    lg = log --graph --topo-order -C -M --pretty=format:\"<%Cred%h%Creset>\t%ad [%C(yellow)%an%Creset] %Cgreen%d%Creset %s\" --all --date=short
     new = log origin/master.. --reverse -C -M --pretty=format:\"<%Cred%h%Creset> %ad [%C(yellow)%an%Creset] %Cgreen%d%Creset %s\" --all --date=short
-[log]
-    date = relative
+    pick = cherry-pick
+    cleanup = "!git branch --merged | grep -v '\\*\\|master\\|dev' | xargs -n 1 git branch -d"
 [color]
     ui = auto
-
