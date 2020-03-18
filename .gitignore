@@ -1,10 +1,9 @@
 # ignore everything
 *
 
-!.gitignore
-!.gitconfig
-!.vim/*
-!.vimrc
-!.bashrc
-!.profile
-!.tmux.conf
+|.gitignore
+|.gitconfig
+|.tmux.conf
+|.tmux.conf.local
+|.config/nvim/*
+|.zshrc

@@ -136,6 +136,7 @@ let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.5, 'yoffset': 1 } }
 
 
 " Set key mappings
+" uuuuhhhh this isn't working on our windows hyper terminal (wsl)
 noremap <C-\> :NERDTreeToggle<CR>
 
 nnoremap <leader>/ :noh<return>
