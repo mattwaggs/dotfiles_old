@@ -1,0 +1,4 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "scss", "javascript", "typescript", "typescriptreact"],
+    "python.jediEnabled": false
+}
