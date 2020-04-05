@@ -14,15 +14,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'kevinoid/vim-jsonc'
 "  Plug 'junegunn/vim-easy-align'
 Plug 'godlygeek/tabular'
+Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'easymotion/vim-easymotion'
 " Plug 'davidhalter/jedi-vim'
 
-" post install (yarn install | npm install) then load plugin only for editing supported files
-"Plug 'prettier/vim-prettier', {
+" post install (yarn install | npm install) then load plugin only for editing supported files Plug 'prettier/vim-prettier', {
   "\ 'do': 'yarn install',
   "\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
-
 "Plug 'autozimu/LanguageClient-neovim', {
     "\ 'branch': 'next',
     "\ 'do': 'bash install.sh',
@@ -136,7 +135,6 @@ let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.5, 'yoffset': 1 } }
 
 
 " Set key mappings
-" uuuuhhhh this isn't working on our windows hyper terminal (wsl)
 noremap <C-\> :NERDTreeToggle<CR>
 
 nnoremap <leader>/ :noh<return>
@@ -170,3 +168,13 @@ set statusline+=%=%l:%c
 
 set splitbelow
 set splitright
+
+
+" The below should only used be used by mintty
+" it is supposed to fix the latency when hitting escape
+" let &t_ti.="\e[?7727h"
+" let &t_te.="\e[?7727l"
+" noremap <Esc>O[ <Esc>
+" noremap! <Esc>O[ <C-c>
+
+"set timeoutlen=1000 ttimeoutlen=0
